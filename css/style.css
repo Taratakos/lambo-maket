@@ -30,8 +30,14 @@ a {
   text-decoration: none;
 }
 
-.container {
+.big-container {
   max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 920px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -107,7 +113,6 @@ a {
   font-size: 48px;
   border-block-start: 1px solid #040404;
   margin-bottom: 10px;
-
 }
 
 .subtitle span {
@@ -131,10 +136,118 @@ a {
 
 /* #endregion */
 
-/* #region XXXX */
+/* #region Info */
+.info {
+  margin-bottom: 100px;
+}
+
+.info__part {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__part--third {
+  padding-top: 66px;
+}
+
+.info__part--first {
+  display: block;
+}
+
+.info__tittle {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.info__part-textbox {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 20px;
+}
+
+.info__text {
+  flex-basis: 440px;
+  margin-bottom: 30px;
+}
+
+/* Всім картинкам слід застосувати, object-fit: cover;, щоб картика коректно відображаласьтому що при адаптиві ми будемо її розширювати/звужувати  */
+.info__part-img {
+  object-fit: cover;
+}
+
+.info__contetnt {
+  flex-basis: 415px;
+}
+
+.info__part--second .info__text {
+  max-width: 352px;
+}
+
+.info__part--third .info__text {
+  max-width: 377px;
+}
+
+.info__table {
+  flex-basis: 440px;
+  border-bottom: 1px solid #040404;
+  position: relative;
+  top: 20px;
+}
+
+.info__table::before {
+  content: "";
+  border-top: 1px solid #000;
+  position: absolute;
+  width: 100%;
+  top: -20px;
+}
+
+.info__table td {
+  padding-bottom: 20px;
+}
+
 /* #endregion */
 
-/* #region XXXX */
+/* #region Track */
+.track {
+  padding-bottom: 90px;
+  background-image: url("../images/track-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.track__inner{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.track__tittle {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.track__text {
+  max-width: 435px;
+}
+
+.track__img {
+  margin: auto auto 90px auto;
+}
+
+
+/* Варіант 1, якщо без блоку <div class="track__inner"> */
+/* .track__img {
+  margin: 0 auto;
+  display: block;
+  margin-top: 250px;
+} */
 /* #endregion */
 
 /* #region XXXX */
