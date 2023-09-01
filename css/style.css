@@ -1,3 +1,10 @@
+/* Підключаємо шрифт Impact який локально знаходиться в папці fonts */
+
+@font-face {
+  font-family: "Impact", sans-serif;
+  src: url(../fonts/impact.woff2);
+}
+
 /* Задамо правильну блочну модель */
 html {
   box-sizing: border-box;
@@ -10,12 +17,12 @@ html {
 }
 
 body {
-  font-family: 'Roboto Condensed', 'Inter', sans-serif;
+  font-family: "Roboto Condensed", "Inter", sans-serif;
   font-weight: 400;
   color: #040404;
   font-size: 14px;
   /* коеф 1.2 === 120% , щоб автоматично рахувалось */
-  line-height: 1.2; 
+  line-height: 1.2;
 }
 
 a {
@@ -32,20 +39,32 @@ a {
 /* #region Header */
 .header {
   padding-top: 25px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #d8d4ca 0%, rgba(217, 217, 217, 0) 100%);
 }
+
 /* #endregion */
 
 /* #region Nav */
 .nav {
   display: flex;
   justify-content: space-between;
-
 }
 
 .menu-list {
   padding-top: 25px;
   display: flex;
   gap: 0 40px;
+}
+
+.menu-left {
+  padding-left: 25px;
+}
+
+.menu-right {
+  padding-right: 80px;
 }
 
 .menu-link {
@@ -55,7 +74,61 @@ a {
 
 /* #endregion */
 
-/* #region XXXX */
+/* #region Promo */
+.promo {
+  background-image: url(../images/promo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.tittle {
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+  font-size: 76px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  align-self: center;
+  margin-left: 74px;
+}
+.subtitle {
+  align-self: center;
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  border-block-start: 1px solid #040404;
+  margin-bottom: 10px;
+
+}
+
+.subtitle span {
+  display: block;
+  font-size: 34px;
+  color: #9f6b08;
+  padding: 10px 0;
+}
+
+.promo__text {
+  color: #363636;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.promo__arrow {
+  margin-top: auto;
+  margin-bottom: 30px;
+  align-self: center;
+}
+
 /* #endregion */
 
 /* #region XXXX */
