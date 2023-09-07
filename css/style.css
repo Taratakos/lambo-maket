@@ -40,6 +40,16 @@ li {
   list-style: none;
 }
 
+/* ця картинка не буде більшою за свої фізичні розміри, але при цьому вона можа ставти меншою і ніякого скролу не буде.
+- для того щоб картинка сама по собі зумилась
++ img {
+    object-fit: cover;
+    }
+     */
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 920px;
   padding: 0 10px;
@@ -578,7 +588,13 @@ li {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 969px) {
+  .evo-white__inner::after {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
   .menu-btn {
     display: flex;
     flex-direction: column;
@@ -625,6 +641,82 @@ li {
   .logo {
     z-index: 10;
   }
+  .info__part-textbox {
+    display: block;
+    padding-bottom: 15px;
+  }
+  .info__part {
+    display: block;
+  }
+
+  .info__part--second .info__text,
+  .info__part--third .info__text {
+    max-width: 100%;
+  }
+  .info__table {
+    width: 100%;
+  }
+}
+
+.info__part-img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .blog__quote {
+    flex-direction: column;
+  }
+  .blog__quote-box {
+    flex-basis: auto;
+  }
+  .blog__quote-img {
+    order: -1;
+  }
+  .blog__item-img {
+    width: 100%;
+  }
+  .info__part {
+    padding-top: 50px;
+  }
+  .evo-black__img{
+    margin-top: 130px;
+  }
+  .evo-white__inner{
+    padding-top: 75px;
+  }
+  .evo-white__video {
+    margin-top: 50px;
+  }
+  .blog,
+  .blog__slider,
+  .evo {
+    margin-bottom: 50px;
+  }
+  .footer {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 669px) {
+  .evo-white__inner::before {
+    display: none;
+  }
+  .evo-black__info {
+    display: block;
+  }
+  .evo__descr-list {
+    display: block;
+    text-align: center;
+  }
+  .evo__descr-lis div {
+    margin-bottom: 15px;
+  }
+  .evo-black__title {
+    margin-bottom: 20px;
+  } 
+  .footer__top {
+    display: block;
+  }
 }
 
 @media (max-width: 560px) {
@@ -638,6 +730,24 @@ li {
   }
   .subtitle span {
     font-size: 26px;
+  }
+  .info__table td:nth-child(2) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .evo-black__inner::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__bottom {
+    display: block;
+    text-align: center;
+  }
+  .footer__logo {
+    padding: 20px 0;
+    display: block;
   }
 }
 
@@ -653,8 +763,8 @@ li {
 }
 
 @media (max-width: 320px) {
-.menu-link {
-  padding: 15px;
-}
+  .menu-link {
+    padding: 15px;
+  }
 }
 /* #endregion */
